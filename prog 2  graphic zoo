@@ -1,0 +1,12 @@
+from bisect import bisect
+
+n = int(raw_input())
+s = list(set(map(int, raw_input().split())))
+k = int(raw_input())
+t = map(int, raw_input().split())
+
+s.sort()
+
+y = len(s)
+for i in range(k):
+    print y - bisect(s,t[i]) + 1
