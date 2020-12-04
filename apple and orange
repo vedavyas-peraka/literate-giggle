@@ -1,0 +1,30 @@
+#!/bin/python
+
+import sys
+
+
+s,t = raw_input().strip().split(' ')
+s,t = [int(s),int(t)]
+a,b = raw_input().strip().split(' ')
+a,b = [int(a),int(b)]
+m,n = raw_input().strip().split(' ')
+m,n = [int(m),int(n)]
+apples = map(int,raw_input().strip().split(' '))
+oranges = map(int,raw_input().strip().split(' '))
+
+ac = 0
+for apple in apples:
+    pos = a + apple
+    if pos >= s and pos <= t:
+        ac += 1
+
+print ac
+
+
+ac = 0
+for orange in oranges:
+    pos = b + orange
+    if pos >= s and pos <= t:
+        ac += 1
+
+print ac
